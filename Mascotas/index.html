@@ -28,13 +28,10 @@
           <li><a data-toggle="modal" data-target="#myModalEnunciado">Enunciado</a></li>
           <li><a data-toggle="modal" data-target="#myModalObjetivo">Objetivos</a></li>
           <li><a data-toggle="modal" data-target="#myModalVariables">Clasificación de variables</a></li>
-          </ul>
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
+          <li><a data-toggle="modal" data-target="#myModalTEI">TEI</a></li>
+          <li><a data-toggle="modal" data-target="#myModalTEF">TEF</a></li>
+          <li><a data-toggle="modal" data-target="#myModalDiagrama">Diagrama</a></li>
+        </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
@@ -80,8 +77,8 @@
               <div class="modal-body">
                 <p>
                   La idea del instituto es analizar la posibilidad de contratar algún médico más en estas temporadas de campaña y también analizar qué sucede en caso de que alguno de los médicos no pueda concurrir. 
-                  A partir de nuestro trabajo de SIMULACIÓN se desea conocer el promedio ocioso de cada médico y el tiempo 
-                  que debe esperar cada paciente al llegar al instituto con el fin de aumentar o disminuir la cantidad de médicos a contratar. 
+                  A partir de nuestro trabajo de SIMULACIÓN se desea conocer el <b>promedio ocioso de cada médico</b> y el <b>tiempo 
+                  que debe esperar cada paciente</b> al llegar al instituto con el fin de aumentar o disminuir la cantidad de médicos a contratar. 
                 </p>
               </div>
               <div class="modal-footer">
@@ -104,14 +101,18 @@
               </div>
               <div class="modal-body">
                 <p>
-                  Un centro especializado en castración animal  cuenta con dos médicos veterinarios que se encargan de la 
-                  cirugía y tiene una sala de espera para albergar cinco animales. 
+                  Un centro especializado en castración animal  cuenta con <b>dos médicos veterinarios</b> que se encargan de la 
+                  cirugía y tiene una sala de espera para albergar <b>cinco animales</b>. 
                   Por normas del Instituto, no pueden quedar animales esperando en la puerta y tampoco 
                   ser más dentro del mismo, por lo que al completarse, se ofrece otro centro especializado cercano. 
                   El Instituto suele generar campañas de concientización sobre la importancia de la castración animal
                   y sus beneficios para la vida del animal, es por ello que cuenta con voluntarios que 
-                  recorren la zona en busca de animales callejeros. Durante estas campañas, el intervalo entre arribos de los animales al centro responden a una fdp y el tiempo que dura la cirugía responde a una fdp.
+                  recorren la zona en busca de animales callejeros. Durante estas campañas, el intervalo entre arribos de los animales al centro responden a una <b>fdp</b> y el tiempo que dura la cirugía responde a una <b>fdp</b>.
                 </p>
+              </div>
+              <div class="row">
+                <div class="col-md-6"><img src="images/jaulas.jpg" class="img-circle" alt="jaulas" width="300" height="200"></div>
+                <div class="col-md-6"><img src="images/medicos.jpg" class="img-circle" alt="Medicos"></div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -132,15 +133,116 @@
                 <h4 class="modal-title">Clasificación de variables</h4>
               </div>
               <div class="modal-body">
-                <p>
-                  Un centro especializado en castración animal  cuenta con dos médicos veterinarios que se encargan de la 
-                  cirugía y tiene una sala de espera para albergar cinco animales. 
-                  Por normas del Instituto, no pueden quedar animales esperando en la puerta y tampoco 
-                  ser más dentro del mismo, por lo que al completarse, se ofrece otro centro especializado cercano. 
-                  El Instituto suele generar campañas de concientización sobre la importancia de la castración animal
-                  y sus beneficios para la vida del animal, es por ello que cuenta con voluntarios que 
-                  recorren la zona en busca de animales callejeros. Durante estas campañas, el intervalo entre arribos de los animales al centro responden a una fdp y el tiempo que dura la cirugía responde a una fdp.
-                </p>
+                <h4>EXÓGENAS</h4>
+                <span class="label label-success">Datos</span>
+                <ul>
+                  <li><p>IA: Intervalo entre arribos de voluntarios con perro (Min).</p></li>
+                  <li><p>Ta: Tiempo de atención para la castración.</p></li>
+                </ul>
+                <span class="label label-success">Control</span>
+                <ul><li><p>N: Cantidad de médicos atendiendo (default = 2).</p></li></ul>
+                 <h4>ENDÓGENAS</h4>
+                 <span class="label label-success">Estado</span>
+                <ul><li><p>NS : Cantidad de Animales en el sistema.</p></li></ul>
+                 <span class="label label-success">Resultado</span>
+                <ul>
+                  <li><p>POM: Promedio Ocioso por Médico.</p></li>
+                  <li><p>PTE : Promedio de Tiempo de Espera de cada paciente.</p></li>
+                </ul>
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+
+        </div>
+    </div>
+
+    <!-- Modal de TEI -->
+    <div id="myModalTEI" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Tabla de eventos independientes "TEI"</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Eventos</th>
+                          <th>EFNO</th>
+                          <th>EFC</th>
+                          <th>Condición</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Llegada</td>
+                          <td>Llegada</td>
+                          <td>Salida(i)</td>
+                          <td>NS<=N</td>
+                        </tr>
+                        <tr>
+                          <td>Salida(i)</td>
+                          <td>  ------ </td>
+                          <td>Salida(i)</td>
+                          <td>NS>=N</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+
+        </div>
+    </div>
+
+
+    <!-- Modal de TEF -->
+    <div id="myModalTEF" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Tabla de eventos futuros "TEF"</h4>
+              </div>
+              <div class="modal-body">
+                <ul>
+                  <li>TPLL:Tiempo de la Próxima Llegada</li>
+                  <li>TPS(i):Tiempo de Próximas Salidas(i)</li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+
+        </div>
+    </div>
+
+    <!-- Modal de diagrama -->
+    <div id="myModalDiagrama" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Diagrama</h4>
+              </div>
+              <div class="modal-body">
+                <img src="images/diagrama.jpg" class="img-thumbnail" alt="Medicos">                
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -156,9 +258,18 @@
         <p class="lead">La principal ventaja de la castración animal es: <b>Vivir una vida más larga y más sana.</b></p>
       </div> 
       <div class="row">
-        <div class="col-md-6"><p>Ayuda a prevenir las infecciones uterinas y el cáncer de mama, el cual es fatal en alrededor del 50 por ciento de los perros y 90 por ciento de los gatos. Además de prevenir crías no deseadas, previene el cáncer a los testículos.</p></div>
+        <div class="col-md-4"><p>Ayuda a prevenir las infecciones uterinas y el cáncer de mama, el cual es fatal en alrededor del 50 por ciento de los perros y 90 por ciento de los gatos. Además de prevenir crías no deseadas, previene el cáncer a los testículos.</p></div>
         <div class="col-md-6"><img src="images/perroIntro.jpg" class="img-circle" alt="Cinque Terre"></div>
       </div>
+      
+      <div>
+        <button>Toggle</button>
+        <p id>Hello</p>
+        <p style="display: none">Good Bye</p>
+
+      </div>
+
+
       <!-- Site footer -->
       <footer class="footer">
         <p>&copy;Curso: K4052 - GRUPO NRO 4 <br> TRABAJO PRÁCTICO NRO 7 </p>
@@ -168,5 +279,6 @@
 
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+  <script src="js/algoritmo.js"></script>
 </body>
 </html>
