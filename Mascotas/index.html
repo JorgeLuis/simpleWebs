@@ -109,10 +109,10 @@
                   y sus beneficios para la vida del animal, es por ello que cuenta con voluntarios que 
                   recorren la zona en busca de animales callejeros. Durante estas campañas, el intervalo entre arribos de los animales al centro responden a una <b>fdp</b> y el tiempo que dura la cirugía responde a una <b>fdp</b>.
                 </p>
-              </div>
-              <div class="row">
-                <div class="col-md-6"><img src="images/jaulas.jpg" class="img-circle" alt="jaulas" width="300" height="200"></div>
-                <div class="col-md-6"><img src="images/medicos.jpg" class="img-circle" alt="Medicos"></div>
+                <div class="row">
+                  <div class="col-md-6" id="diagrama"><img src="images/jaulas.jpg" class="img-circle" alt="jaulas" width="260" height="200"></div>
+                  <div class="col-md-6" id="diagrama"><img src="images/medicos.jpg" class="img-circle" alt="Medicos" height="200"></div><br>
+                </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -242,8 +242,12 @@
                 <h4 class="modal-title">Diagrama</h4>
               </div>
               <div class="modal-body">
-                <img src="images/diagrama.jpg" class="img-thumbnail" alt="Medicos">                
-              </div>
+                <div id="diagrama">
+                  <span class='zoom' id='ex1'>
+                <img src="images/diagrama.jpg" width='500' height='700' alt='Daisy on the Ohoopee'/>
+              </span>
+                </div>
+            </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               </div>
@@ -263,16 +267,9 @@
       </div>
       
       <div>
-        <button>Toggle</button>
-        <p id>Hello</p>
-        <p style="display: none">Good Bye</p>
+        <button id="analizador">Analizar</button>
       </div>
-      <div>
-        <span class='zoom' id='ex1'>
-          <img src='daisy.jpg' width='555' height='320' alt='Daisy on the Ohoopee'/>
-        </span>
-      </div>
-
+      
 
       <!-- Site footer -->
       <footer class="footer">

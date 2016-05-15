@@ -2,11 +2,10 @@ body{
 	padding-top: 60px;
 
 }
-p{
-	text-align:center;
+
+#diagrama{
+	text-align: center;
 }
-
-
 /* these styles are for the demo, but are not required for the plugin */
 .zoom {
 	display:inline-block;

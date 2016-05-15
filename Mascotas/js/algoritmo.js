@@ -3,11 +3,13 @@ $(document).ready(function(){
 
 });
 
-$( "button" ).click(function() {
 
-	$( "p" ).toggle();
+$( "#analizador" ).click(function() {
+	alert("pp");
 
-	});
+	//$( "p" ).toggle();
+
+});
 
 
 
