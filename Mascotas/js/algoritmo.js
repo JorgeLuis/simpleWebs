@@ -10,12 +10,17 @@
 //js no compila nada
 //una variable es un dato, que guarda informacion
 //el scrip es una funcion que se puede volver a utilizar  
-$(document).ready(function(){
+$(document).ready(function(){// esto es una super funcion!!! genera un objeto jquey que manipula todos los elementos
   $('#ex1').zoom();
 
   
+ $( "#analizador" ).on("click",function(){
+ 	analizarAlgoritmo();
+ });  
 
-});
+});//esta funcion se ejecuta recien cuando se cargo el documento!!! groso!!!
+//cuando el documento este cargado llamame a esta funcion!!!
+//esta funcion es la parte de inicializacion
 
 
 function buscarElMejorTPSi(){
@@ -33,7 +38,7 @@ function buscarElOITCorrespondiente(i){
 	return 1;
 }
 
-$( "#analizador" ).click(function() {
+function analizarAlgoritmo() {
 	
 	//1)Condiciones Iniciales
 	var Ia=[1,2,35];
@@ -113,7 +118,7 @@ $( "#analizador" ).click(function() {
 	//10)Mostrar resultados
 	alert("LLego hasta el final: falta analizar más");
 
-});
+};
 
 
 
