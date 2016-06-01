@@ -127,17 +127,18 @@ function sumarTiempoMasIntervalo(T,minutos){
 	var h1= hora1[0];
 	var m1= hora1[1];
 	
-	var r_minu = parseInt(m1)+parseInt(minutos);
-	
+	var num_minu = parseInt(m1)+parseInt(minutos);
+	var minu="";
 
-	if (r_minu>59) {
+	if (num_minu>59) {
   		h1 = parseInt(h1) +1;
-  		r_minu = r_minu - 60;
+  		num_minu = num_minu - 60;
+  	}else{
 
-  		if (r_minu<10) {
-  			var minu = "0" + r_minu.toString();
+  		if (num_minu<10) {
+  			minu = "0" + num_minu.toString();
   		}else{
-  			var minu = r_minu.toString();
+  			minu = num_minu.toString();
   		};
 
   	};
